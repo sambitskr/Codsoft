@@ -2,7 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:to_do_list/util/my_button.dart';
 
 class DialogBox extends StatelessWidget {
-  const DialogBox({super.key});
+  final controller;
+  VoidCallback onSave;
+  VoidCallback onCancel;
+
+  DialogBox(
+      {super.key,
+      required this.controller,
+      required this.onSave,
+      required this.onCancel});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +23,7 @@ class DialogBox extends StatelessWidget {
           children: [
             // get user inout
             TextField(
+              controller: controller,
               decoration: InputDecoration(
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
@@ -30,7 +39,7 @@ class DialogBox extends StatelessWidget {
                 // save button
                 MyButton(
                   text: "Save",
-                  onPressed: () {},
+                  onPressed: onSave,
                 ),
                 const SizedBox(
                   width: 9,
@@ -39,7 +48,7 @@ class DialogBox extends StatelessWidget {
                 // cancel button
                 MyButton(
                   text: "Cancel",
-                  onPressed: () {},
+                  onPressed: onCancel,
                 ),
               ],
             ),
