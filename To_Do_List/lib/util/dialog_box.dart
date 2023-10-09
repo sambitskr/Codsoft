@@ -17,11 +17,14 @@ class DialogBox extends StatelessWidget {
     return AlertDialog(
       backgroundColor: Colors.grey[300],
       content: Container(
-        height: 120,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+        ),
+        height: 200,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            // get user inout
+            // get user input
             TextField(
               controller: controller,
               decoration: InputDecoration(
@@ -38,7 +41,7 @@ class DialogBox extends StatelessWidget {
               children: [
                 // save button
                 MyButton(
-                  text: "Save",
+                  text: "Add",
                   onPressed: onSave,
                 ),
                 const SizedBox(
