@@ -25,11 +25,12 @@ class DialogBox extends StatelessWidget {
             TextField(
               controller: controller,
               decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                hintText: "Add a new Task",
-              ),
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  hintText: "Add a new Task",
+                  hintStyle: TextStyle(color: Colors.black)),
             ),
 
             // buttons -> save + cancel

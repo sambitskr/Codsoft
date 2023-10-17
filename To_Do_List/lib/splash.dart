@@ -18,7 +18,7 @@ class _SplashState extends State<Splash> {
 
   navigatetologin() async {
     await Future.delayed(
-      const Duration(milliseconds: 3000),
+      const Duration(milliseconds: 5000),
       () {},
     );
     // ignore: use_build_context_synchronously
@@ -27,17 +27,24 @@ class _SplashState extends State<Splash> {
   }
 
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Lottie.asset('animations/todo.json', height: 300, width: 300),
-          Text(
-            "CheckIt Off",
-            style: TextStyle(color: Colors.black, fontSize: 30),
-          )
-        ],
+    return Scaffold(
+      body: Center(
+        child: Container(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                height: 300,
+                width: 300,
+                child: Lottie.asset('animations/todo.json'),
+              ),
+              Text(
+                "CheckIt Off",
+                style: TextStyle(color: Colors.white, fontSize: 30),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

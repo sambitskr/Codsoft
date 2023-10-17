@@ -76,13 +76,14 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.grey[700],
       appBar: AppBar(
         title: Text('CheckIt Off'),
         centerTitle: true,
         elevation: 0,
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.white,
         onPressed: createNewTask,
         child: Icon(Icons.add),
       ),
