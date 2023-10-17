@@ -87,27 +87,29 @@ class _HomePageState extends State<HomePage> {
         child: Icon(Icons.add),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      Text(
-                        'All To Do',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
-                      Icon(Icons.keyboard_arrow_down_outlined)
-                    ],
-                  ),
+        // child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Text(
+                      'All To Do',
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Icon(Icons.keyboard_arrow_down_outlined)
+                  ],
                 ),
               ),
-              ListView.builder(
+            ),
+            Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
                 shrinkWrap: true,
                 itemCount: db.toDoList.length,
                 itemBuilder: (context, index) {
@@ -119,9 +121,10 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+        // ),
       ),
     );
   }
