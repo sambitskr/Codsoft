@@ -23,6 +23,7 @@ class DialogBox extends StatelessWidget {
           children: [
             // get user input
             TextField(
+              style: TextStyle(color: Colors.black),
               controller: controller,
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quote_of_the_day/pages/login.dart';
+import 'package:quote_of_the_day/pages/home.dart';
+import 'package:quote_of_the_day/utilities/hidden_drawer.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -10,7 +11,7 @@ class IntroPage extends StatelessWidget {
     double height = 40;
     double width = 40;
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Color.fromRGBO(97, 130, 100, 1),
       body: Container(
         margin: EdgeInsets.only(right: 20, left: 20),
         child: Column(
@@ -19,6 +20,7 @@ class IntroPage extends StatelessWidget {
             Spacer(),
             Image.asset(
               "assets/quote.png",
+              color: Colors.white,
               height: height,
               width: width,
             ),
@@ -29,13 +31,14 @@ class IntroPage extends StatelessWidget {
               text: TextSpan(
                 style: TextStyle(fontSize: 50, color: Colors.black),
                 children: [
-                  TextSpan(
-                    text: "Get\n",
+                  const TextSpan(
+                    text: "Spark\n",
+                    style: TextStyle(color: Colors.white),
                   ),
                   TextSpan(
-                    text: "Inspired",
+                    text: "Your Imagination!",
                     style: GoogleFonts.lato(
-                      textStyle: TextStyle(fontSize: 80, color: Colors.black),
+                      textStyle: TextStyle(fontSize: 50, color: Colors.white),
                     ),
                   )
                 ],
@@ -54,7 +57,7 @@ class IntroPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => LoginPage(),
+                      builder: (context) => HiddenDrawerPage(),
                     ),
                   );
                 },

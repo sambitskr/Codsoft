@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:quote_of_the_day/pages/introPage.dart';
+import 'package:quote_of_the_day/pages/spalsh.dart';
 import 'package:quote_of_the_day/provider/favorite_provider.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         title: 'Quote Sapient',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(),
-        home: const IntroPage(),
+        home: const Splash(),
       ),
     );
   }

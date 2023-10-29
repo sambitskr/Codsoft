@@ -71,28 +71,6 @@ class _HomePageState extends State<HomePage> {
             return CircularProgressIndicator();
         },
       ),
-      // body: PageView(
-      //   children: [
-      //     QuoteWidget(
-      //       quote:
-      //           "Don't let the noises of others' opinion drown out your inner voice",
-      //       author: "Steve jobs",
-      //       onLikeClick: () {},
-      //       onShareClick: () {},
-      //       onCopyClick: () {},
-      //       bgcolor: Colors.blue,
-      //     ),
-      //     QuoteWidget(
-      //       quote:
-      //           "Don't let the noises of others' opinion drown out your inner voice",
-      //       author: "Steve jobs",
-      //       onLikeClick: () {},
-      //       onShareClick: () {},
-      //       onCopyClick: () {},
-      //       bgcolor: Colors.black,
-      //     ),
-      //   ],
-      // ),
     );
   }
 }
